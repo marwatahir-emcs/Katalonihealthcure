@@ -17,7 +17,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('google.com')
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('http://192.168.88.254:325/Account/LogIn?ReturnUrl=%2f')
+
+WebUI.setText(findTestObject('Object Repository/input_username'), 'badmin')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/input_password'), 'CSt51UwWECc=')
+
+WebUI.click(findTestObject('Object Repository/button_Sign In'))
 
 WebUI.closeBrowser()
 
